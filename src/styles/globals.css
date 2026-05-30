@@ -1,0 +1,39 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  }
+
+  input,
+  button {
+    font-family: inherit;
+  }
+}
+
+@layer components {
+  .glass-panel {
+    @apply bg-white/60 backdrop-blur-xl border border-gray-200/60;
+  }
+
+  .glass-button {
+    @apply bg-white/80 hover:bg-white border border-gray-200/80 backdrop-blur-sm;
+    @apply transition-all duration-200;
+  }
+
+  .glass-button-primary {
+    @apply bg-gray-900 text-white hover:bg-gray-800;
+    @apply transition-all duration-200;
+  }
+
+  .glass-input {
+    @apply bg-white/50 border border-gray-300/60;
+    @apply transition-all duration-200 focus:border-gray-700 focus:ring-1 focus:ring-gray-700;
+  }
+}
